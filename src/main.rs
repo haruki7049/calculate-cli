@@ -21,9 +21,12 @@ fn main(){
 }
 
 fn calculate_parameter(args: &Args) -> i32{
-    let operator: String = args.operator;
+    let operator: &str = &args.operator;
     match operator {
-        "+" => args.first_parameter + args.second_parameter
-        _ => 0
+        "+" => args.first_parameter + args.second_parameter,
+        "-" => args.first_parameter - args.second_parameter,
+        "*" => args.first_parameter * args.second_parameter,
+        "/" => args.first_parameter / args.second_parameter,
+        _ => 0,
     }
 }
