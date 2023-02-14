@@ -30,3 +30,14 @@ fn calculate_parameter(args: &Args) -> i32{
         _ => 0,
     }
 }
+
+#[test]
+fn test_main(){
+    let args: Args = Args::parse();
+    let i = args.first_parameter + args.second_parameter;
+    let j = args.first_parameter - args.second_parameter;
+    let k = args.first_parameter * args.second_parameter;
+    let l = args.first_parameter / args.second_parameter;
+
+    println!("{}, {}, {}, {}", i, j, k, l);
+}
