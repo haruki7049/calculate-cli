@@ -23,11 +23,11 @@ fn main(){
 fn calculate_parameter(args: &Args) -> i32{
     let operator: &str = &args.operator;
     match operator {
-        "+" => args.first_parameter + args.second_parameter,
-        "-" => args.first_parameter - args.second_parameter,
-        "*" => args.first_parameter * args.second_parameter,
-        "/" => args.first_parameter / args.second_parameter,
-        _ => 0,
+        "addition" => args.first_parameter + args.second_parameter,
+        "subtraction" => args.first_parameter - args.second_parameter,
+        "multiplication" => args.first_parameter * args.second_parameter,
+        "division" => args.first_parameter / args.second_parameter,
+        _ => 0,//TODO: I want to return a ERROR parameter.
     }
 }
 
